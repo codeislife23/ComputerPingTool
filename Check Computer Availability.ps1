@@ -1,3 +1,14 @@
+Add-Type -Name Window -Namespace ConsoleApp -MemberDefinition '
+[DllImport("Kernel32.dll")]
+public static extern IntPtr GetConsoleWindow();
+
+[DllImport("user32.dll")]
+public static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
+'
+$consolePtr = [ConsoleApp.Window]::GetConsoleWindow()
+# Hide the console window
+[ConsoleApp.Window]::ShowWindow($consolePtr, 0)
+
 Add-Type -AssemblyName System.Windows.Forms
 
 $form = New-Object System.Windows.Forms.Form
