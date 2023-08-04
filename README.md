@@ -1,5 +1,8 @@
 # Computer Ping Tool
 
+![ping tool](https://github.com/codeislife23/ComputerPingTool/assets/13984986/832f9c8b-a1e5-4607-8e67-1183d51d26f2)
+
+
 This PowerShell script checks the availability of a list of computers by attempting to ping each computer. The script reads a list of computer names and their IP addresses from a text file and then tests the connection to each IP address. If the ping is successful, the script displays a message indicating that the computer is up. If the ping is unsuccessful, the script displays a message indicating that the computer is down.
 
 Inputs:
